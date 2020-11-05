@@ -29,12 +29,12 @@ script:
     for image in `cat images-$version.txt`
     do
       echo [$icount/$count]: $image
-      image_name=`echo $image | sed -e 's/k8s.gcr.io\///g' -e 's/quay.io\///g' -e 's/gcr.io\///g'`
+      image_name=${image##*/}
       docker pull $image
-      docker tag $image $DOCKERHUB_USERNAME/$image_name
+      docker tag $image $DOCKERHUB_USERNAME/$image
       
       # push to dockerhub
-      docker push $DOCKERHUB_USERNAME/$image_name
+      docker push $DOCKERHUB_USERNAME/$image
       ((icount++))
     done
 
