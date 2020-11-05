@@ -22,7 +22,7 @@ before_script:
 script:
   - |
     echo "start pull retag and push"
-    count=$(cat images.txt | wc -l)
+    count=$(cat images-1.18.10.txt | wc -l)
     icount=1
     for image in `cat images.txt`
     do
