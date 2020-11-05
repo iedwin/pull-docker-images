@@ -7,3 +7,10 @@ k8s.gcr.io/etcd:3.4.3-0
 k8s.gcr.io/coredns:1.7.0
 k8s.gcr.io/k8s-dns-node-cache
 k8s.gcr.io/cluster-proportional-autoscaler-amd64
+quay.io/external_storage/cephfs-provisioner
+quay.io/external_storage/local-volume-provisioner
+quay.io/external_storage/rbd-provisioner
+quay.io/jetstack/cert-manager-controller
+quay.io/l23network/k8s-netchecker-agent
+quay.io/l23network/k8s-netchecker-server
+
